@@ -1,2 +1,1 @@
-# pirpleJsCourse
-My assignments to Pirple JS course
+# My assignments to Pirple JS course
