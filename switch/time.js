@@ -27,6 +27,18 @@ const numberCheck = (number) => {
   } else return false;
 };
 
+const convert = function (time, type) {
+  if (type === "minute" || type === "minutes") {
+    return time * 60;
+  } else if (type === "hour" || type === "hours") {
+    return time * 3600;
+  } else if (type === "day" || type === "days") {
+    return time * 86400;
+  } else {
+    return time;
+  }
+};
+
 const timeAdder = function (timeOne, typeOne, timeTwo, typeTwo) {
   if (arguments.length < 4) {
     return console.log(
@@ -69,4 +81,5 @@ const timeAdder = function (timeOne, typeOne, timeTwo, typeTwo) {
       `This is impossible because "${typeTwo}" is singular and ${timeTwo} is plural`
     );
   }
+  let converted = convert(timeOne, typeOne) + convert(timeTwo, typeTwo);
 };
