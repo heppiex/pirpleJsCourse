@@ -27,7 +27,7 @@ const numberCheck = (number) => {
   } else return false;
 };
 
-const convert = function (time, type) {
+const convertToSecond = function (time, type) {
   if (type === "minute" || type === "minutes") {
     return time * 60;
   } else if (type === "hour" || type === "hours") {
@@ -81,5 +81,43 @@ const timeAdder = function (timeOne, typeOne, timeTwo, typeTwo) {
       `This is impossible because "${typeTwo}" is singular and ${timeTwo} is plural`
     );
   }
-  let converted = convert(timeOne, typeOne) + convert(timeTwo, typeTwo);
+
+  let converted =
+    convertToSecond(timeOne, typeOne) + convertToSecond(timeTwo, typeTwo);
+
+  if (converted >= 86400 && converted % 86400 === 0) {
+    converted = converted / 86400;
+    if (converted === 1) {
+      return console.log([converted, "day"]);
+    } else {
+      return console.log([converted, "days"]);
+    }
+  } else if (converted >= 3600 && converted % 3600 === 0) {
+    converted = converted / 3600;
+    if (converted === 1) {
+      return console.log([converted, "hour"]);
+    } else {
+      return console.log([converted, "hours"]);
+    }
+  } else if (converted >= 60 && converted % 60 === 0) {
+    converted = converted / 60;
+    if (converted === 1) {
+      return console.log([converted, "minute"]);
+    } else {
+      return console.log([converted, "minutes"]);
+    }
+  } else {
+    if (converted === 1) {
+      return console.log([converted, "second"]);
+    } else {
+      return console.log([converted, "seconds"]);
+    }
+  }
 };
+
+timeAdder(1, "day", 24, "hours");
+timeAdder(20, "hours", 5, "hours");
+timeAdder(20, "hours", 4, "hours");
+timeAdder(1, "minute", 3, "minutes");
+timeAdder(5, "days", 25, "hours");
+timeAdder(1, "minute", 240, "seconds");
