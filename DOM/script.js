@@ -23,7 +23,7 @@ const elementConstructor = function (
 ) {
   if (typeof what != "string" || typeof where != "string") {
     console.log("You pass in elementConstructor bad type!");
-    return 0;
+    return 1;
   }
 
   const element = document.createElement(what);
@@ -47,6 +47,27 @@ const elementConstructor = function (
   }
 };
 
+const rectanglesConstructor = function (where) {
+  if (typeof where != "string") {
+    console.log("Bad type in rectanglesConstructor");
+    return 2;
+  }
+
+  for (const color in colors) {
+    const element = document.createElement("p");
+    const text = document.createElement("p");
+    const container = document.createElement("div");
+    element.setAttribute("class", "container");
+    element.setAttribute("id", color);
+    element.setAttribute("class", "rectangle");
+    element.style.backgroundColor = colors[color];
+    text.innerText = `${color} ${colors[color]}`;
+    document.querySelector(where).appendChild(container);
+    container.appendChild(element);
+    container.appendChild(text);
+  }
+};
+
 elementConstructor("h1", "Rectangles, just rectangles", "body");
 elementConstructor("title", "Rectangles, just rectangles", "head");
 elementConstructor(
@@ -54,3 +75,12 @@ elementConstructor(
   "Rectangles lot of them, I don't know why are you still here.",
   "body"
 );
+
+elementConstructor("div", null, "body", null, "rectangleWrapper");
+const wrapperStyle = document.querySelector("#rectangleWrapper").style;
+wrapperStyle.display = "flex";
+wrapperStyle.width = "100%";
+wrapperStyle.justifyContent = "space-between";
+wrapperStyle.margin = "50px 10px 0";
+
+rectanglesConstructor("#rectangleWrapper");
