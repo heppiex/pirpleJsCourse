@@ -12,6 +12,8 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/window.css" />
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
@@ -28,14 +30,15 @@
         <a href="" class="box"></a>
       </div>
       <p class="label-turn"><span class="turn"></span>turn</p>
-      <div class="window hidden">
-        <p class="label-winner"><span class="winner"></span> won</p>
-        <p class="label-streak">
-          <span class="winner"></span> <span class="streak">1</span>
-        </p>
-        <button class="reset">Restart game?</button>
-      </div>
     </main>
+    <div class="window hidden">
+      <p class="label-winner"><span class="winner"></span> won</p>
+      <p class="label-streak">
+        <span class="winner"></span> <span class="streak">1</span>
+      </p>
+      <button class="reset">Restart game?</button>
+    </div>
+    <div class="hidden overlay"></div>
     <script src="tic-tac-toe.js"></script>
   </body>
 </html>
