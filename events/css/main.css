@@ -1,0 +1,23 @@
+:root {
+  --color-main: hsl(0, 0%, 98%);
+  --color-mainFont: hsl(218.18, 17.46%, 12.35%);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    hsl(200, 100%, 55%),
+    hsl(350, 100%, 55%)
+  );
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-family: "Varela Round", sans-serif;
+  color: var(--color-mainFont);
+  cursor: default;
+}
