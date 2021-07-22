@@ -17,17 +17,23 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <main>
-      <div class="game">
-        <p class="box border-right border-bottom"></p>
-        <p class="box border-right border-bottom"></p>
-        <p class="box border-bottom"></p>
-        <p class="box border-right border-bottom"></p>
-        <p class="box border-right border-bottom"></p>
-        <p class="box border-bottom"></p>
-        <p class="box border-right"></p>
-        <p class="box border-right"></p>
-        <p class="box"></p>
+    <main class="game">
+      <div class="row" id=" row1">
+        <p class="box border-right border-bottom">x</p>
+        <p class="box border-right border-bottom">o</p>
+        <p class="box border-bottom">x</p>
+      </div>
+
+      <div class="row" id="row2">
+        <p class="box border-right border-bottom">o</p>
+        <p class="box border-right border-bottom">x</p>
+        <p class="box border-bottom">o</p>
+      </div>
+
+      <div class="row" id="row3">
+        <p class="box border-right">x</p>
+        <p class="box border-right">o</p>
+        <p class="box">x</p>
       </div>
     </main>
     <div class="window hidden">
