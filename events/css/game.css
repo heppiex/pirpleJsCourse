@@ -1,4 +1,4 @@
-main {
+.game {
   width: 600px;
   height: 600px;
   border-radius: 1em;
@@ -7,20 +7,15 @@ main {
   overflow: hidden;
 }
 
-.game {
-  display: flex;
-  flex-wrap: wrap;
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
 }
 
 .box {
-  position: relative;
-  top: 1px;
-  right: -1px;
-  font-size: 128px;
-  line-height: 184px;
-  height: 198px;
-  width: 198px;
+  font-size: 160px;
   margin: 0;
+  height: 200px;
   cursor: pointer;
 }
 
