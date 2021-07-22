@@ -1,6 +1,7 @@
 :root {
   --color-main: hsl(0, 0%, 98%);
   --color-mainFont: hsl(218.18, 17.46%, 12.35%);
+  --color-border: hsl(0, 0%, 90%);
 }
 
 body {
