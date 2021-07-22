@@ -19,24 +19,23 @@
   <body>
     <main>
       <div class="game">
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
-        <a href="" class="box"></a>
+        <p class="box border-right border-bottom"></p>
+        <p class="box border-right border-bottom"></p>
+        <p class="box border-bottom"></p>
+        <p class="box border-right border-bottom"></p>
+        <p class="box border-right border-bottom"></p>
+        <p class="box border-bottom"></p>
+        <p class="box border-right"></p>
+        <p class="box border-right"></p>
+        <p class="box"></p>
       </div>
-      <p class="label-turn"><span class="turn"></span>turn</p>
     </main>
     <div class="window hidden">
-      <p class="label-winner"><span class="winner"></span> won</p>
-      <p class="label-streak">
-        <span class="winner"></span> <span class="streak">1</span>
+      <p id="label-winner"><span id="winner"></span> won</p>
+      <p id="label-streak">
+        <span id="winner"></span> streak: <span id="streak">1</span>
       </p>
-      <button class="reset">Restart game?</button>
+      <button id="reset">Restart game?</button>
     </div>
     <div class="hidden overlay"></div>
     <script src="tic-tac-toe.js"></script>
