@@ -1,0 +1,33 @@
+main {
+  width: 600px;
+  height: 600px;
+  border-radius: 1em;
+  background-color: var(--color-main);
+  text-align: center;
+  overflow: hidden;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  top: 1px;
+  right: -1px;
+  font-size: 128px;
+  line-height: 184px;
+  height: 198px;
+  width: 198px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.border-right {
+  border-right: 2px solid hsl(0, 0%, 90%);
+}
+
+.border-bottom {
+  border-bottom: 2px solid hsl(0, 0%, 90%);
+}
