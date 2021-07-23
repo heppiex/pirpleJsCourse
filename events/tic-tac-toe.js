@@ -60,7 +60,7 @@ const winMessage = (win) => {
   // streak check
   if (win === whoWon) {
     streakCount++;
-    streak.innerHTML = `${win} have now ${streakCount} streak💪`;
+    streak.innerHTML = `${win} have now streak: ${streakCount}💪`;
   } else {
     streakCount = 1;
     streak.innerHTML = `Streak one keep up👍`;
